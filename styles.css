@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,10 +16,10 @@ body {
     --header-btn: #0284c7;
     --highlight: #fbbf24;
     --shadow: #a3a3a3;
-    --mainfont: ;
-    --mainfont-clr: ;
-    --subfont: ;
-    --subfont-clr: ;
+    --mainfont: Poppins, sans-serif;
+    --mainfont-clr: #171717;
+    --subfont: Poppins, sans-serif;
+    --subfont-clr: #525252;
 }
 
 .container {
@@ -27,9 +29,12 @@ body {
 }
 /* header grid layout */
 .header {
+    font-family: var(--mainfont);
+    font-weight: bold;
     background-color: var(--headercolor);
     box-shadow: 5px 5px 5px var(--shadow);
     margin-bottom: 10px;
+    padding: 20px 20px;
     grid-column: 2 / span 2;
     grid-row: 1 / 2;
 
@@ -38,15 +43,29 @@ body {
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
-
+button {
+    background-color: var(--header-btn);
+    font-family: var(--mainfont);
+    font-size: 14px;
+    color: var(--sidebar-txtclr);
+    border-radius: 20px;
+    width: 100px;
+    padding: 8px;
+    border: none;
+    text-align: center;
+}
 .info-head {
     grid-column: 1 / 2;
     grid-row: 1 /2;
 }
 
 .user-tools {
-    grid-column: 2 /3;
     grid-row: 2 / 3;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .user-greet {
@@ -81,6 +100,7 @@ body {
 
 }
 
+
 /* main content grid layout */
 
 .main-content {
@@ -89,17 +109,25 @@ body {
     grid-row: 2 / 4;
 
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    
 }
 
 .card-container {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(2, min(200px, 50%));
-    grid-template-rows: repeat(3, max(120px, 15%));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
 }
 
 .right-sidebar {
     display: grid;
     grid-template-rows: 1fr 1fr;
+}
+
+/* main content boxes */
+
+.project-card {
+    background-color: var(--headercolor);
 }
