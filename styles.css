@@ -2,9 +2,70 @@
     margin: 0;
     padding: 0;
 }
+.container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr 1fr;
+}
 
 .header {
-    background-color: aquamarine;
-    height: 20px;
-    width: 100%;
+    background-color: lightpink;
+    grid-column: 2 / span 2;
+    grid-row: 1 / 2;
+
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.info-head {
+    grid-column: 1 / 2;
+    grid-row: 1 /2;
+}
+
+.user-tools {
+    grid-column: 2 /3;
+    grid-row: 2 / 3;
+}
+
+.user-greet {
+    grid-row: 2/3;
+}
+
+
+.sidebar {
+    background-color: turquoise;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+
+    display: grid;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.dashboard {
+    font-size: 20px;
+}
+
+.nav{
+
+}
+
+.branding {
+
+}
+
+.nav-item,
+.brand-item {
+
+}
+
+
+
+.main-content {
+    background-color: gold;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
 }
