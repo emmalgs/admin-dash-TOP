@@ -40,6 +40,7 @@ body {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 80px);
 }
 
 .info-head {
@@ -80,6 +81,7 @@ input[type="text"],
 
 .username {
     font-size: 14px;
+    flex: 1;
 }
 
 .user-tools {
@@ -89,36 +91,42 @@ input[type="text"],
     gap: 16px;
     align-items: center;
     margin-right: 20px;
+    justify-self: end;
 }
 
-.user-greet {
+.greet-container {
     grid-row: 2/3;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.user-greet {
+    margin-left: 16px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: ;
-    gap: 8px;
-    align-items: end;
+    grid-template-rows: repeat(2, 40px);
 }
 
 .greeting {
     font-size: 12px;
     grid-column: 2 / 3;
     width: 25%;
-
+    align-self: flex-end;
 }
 .username-greet {
     font-size: 18px;
     grid-column: 2 / 3;
     grid-row: 2 /3;
+    align-self: flex-start;
 }
-.usericon {
-    grid-column: 1 / 2;
 
-}
 .usericon > img {
     border-radius: 50%;
     height: auto;
-    width: clamp(30px, 100px, 150px);
+    width: clamp(30px, 80px, 100px);
+    grid-column: 1 /2;
+    grid-row: 1 / span 3;
+    justify-self: end;
 }
 .usericon-small > img {
     border-radius: 50%;
