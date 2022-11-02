@@ -69,6 +69,16 @@ button:hover {
     background-color: var(--sidebarcolor);
 }
 
+.search-icon > img {
+    height: auto;
+    width: 2rem;
+}
+.alert-icon > img {
+    height: auto;
+    width: 2rem;
+}
+
+
 input[type="text"],
 #searchbar {
     width: 70%;
@@ -136,31 +146,21 @@ input[type="text"],
 
 /* sidebar grid layout */
 .sidebar {
+    font-family: var(--mainfont);
     color: var(--sidebar-txtclr);
     background-color: var(--sidebarcolor);
     grid-column: 1 / 2;
     grid-row: 1 / 4;
 
-    display: grid;
-    justify-content: space-around;
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
 }
 
 .dashboard {
-    font-size: 20px;
-}
-
-.nav{
-
-}
-
-.branding {
-
-}
-
-.nav-item,
-.brand-item {
-
+    font-size: 25px;
+    align-self: center;
 }
 
 
@@ -172,10 +172,18 @@ input[type="text"],
     grid-row: 2 / 4;
 
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     
 }
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
+    font-family: var(--mainfont);
+    color: var(--mainfont-clr);
+    padding: 16px;
+}
 .card-container {
     display: grid;
     gap: 20px;
@@ -185,12 +193,35 @@ input[type="text"],
 }
 
 .right-sidebar {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    font-family: var(--mainfont);
+    color: var(--mainfont-clr);
+    padding: 16px;
 }
 
-/* main content boxes */
-
+.anc-container, 
+.trend-container,
 .project-card {
     background-color: var(--headercolor);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px var(--shadow);
+}
+
+.project-card {
+    border-left: 5px solid var(--highlight);
+}
+.project-card > h1,
+.anc-item > h1 {
+    font-size: 14px;
+    padding: 10px 0;
+}
+.project-card > p,
+.anc-item > p {
+    font-size: 12px;
+    color: var(--subfont-clr);
+    padding-bottom: 24px;
 }
