@@ -53,6 +53,14 @@ body {
     gap: 16px;
 }
 
+.user-info-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
 button {
     background-color: var(--header-btn);
     font-family: var(--mainfont);
@@ -77,7 +85,10 @@ button:hover {
     height: auto;
     width: 2rem;
 }
-
+.username {
+    font-size: 12px;
+    flex-grow: 3;
+}
 
 input[type="text"],
 #searchbar {
@@ -87,11 +98,6 @@ input[type="text"],
     border-radius: 20px;
     padding: 8px;
     margin-right: clamp(6rem, 4rem, 4rem);
-}
-
-.username {
-    font-size: 14px;
-    flex: 1;
 }
 
 .user-tools {
@@ -160,7 +166,26 @@ input[type="text"],
 
 .dashboard {
     font-size: 25px;
-    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav, 
+.branding {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    
+}
+
+.nav-item,
+brand-item {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
 }
 
 
@@ -178,11 +203,10 @@ input[type="text"],
 .project-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
 
     font-family: var(--mainfont);
     color: var(--mainfont-clr);
-    padding: 16px;
+    padding: 0 16px 16px 16px;
 }
 .card-container {
     display: grid;
@@ -199,9 +223,11 @@ input[type="text"],
 
     font-family: var(--mainfont);
     color: var(--mainfont-clr);
+    padding: 0 16px 16px 16px;
+}
+.title {
     padding: 16px;
 }
-
 .anc-container, 
 .trend-container,
 .project-card {
@@ -214,14 +240,47 @@ input[type="text"],
 .project-card {
     border-left: 5px solid var(--highlight);
 }
+
 .project-card > h1,
-.anc-item > h1 {
+.anc-item > h1,
+.trend-users > h1 {
     font-size: 14px;
     padding: 10px 0;
 }
 .project-card > p,
-.anc-item > p {
+.anc-item > p,
+.trend-users > p {
     font-size: 12px;
     color: var(--subfont-clr);
     padding-bottom: 24px;
+}
+
+.trend-items > img {
+    border-radius: 50%;
+    height: auto;
+    width: clamp(30px, 60px, 80px);
+}
+
+.trend-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.trend-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px
+}
+
+.trend-users {
+    display: grid;
+    grid-template-rows: repeat(2, 40px);
+    align-items: center;
+}
+
+.trend-users > h1 {
+    margin-top: 8px;
 }
